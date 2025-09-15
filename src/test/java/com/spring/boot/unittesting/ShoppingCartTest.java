@@ -4,10 +4,13 @@ import com.spring.boot.unittesting.cart.Item;
 import com.spring.boot.unittesting.cart.ShoppingCart;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ShoppingCartTest {
     private ShoppingCart cart;
@@ -16,6 +19,17 @@ public class ShoppingCartTest {
     @Before
     public void setUpBeforeClass() {
         cart = new ShoppingCart();
+    }
+
+    @Ignore("test ignored")
+    @Test
+    public void aTest() {
+        assertThat(1 + 1, is(2));
+    }
+
+    @Test
+    public void bTest() {
+
     }
 
     //all test cases for item
